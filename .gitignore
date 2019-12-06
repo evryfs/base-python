@@ -1,0 +1,2 @@
+# First rule of vim, dont talk about .swp files
+.*.swp
