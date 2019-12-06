@@ -9,10 +9,12 @@ Just add your sauce to /app and proceed as befitting your platform.
 
 ### Defaults
 
-| user | appuser |
-| UID  | 1001    |
-| GID  | 100     |
-| cwd  | /app    |
+Attribute | Value
+--------- | -------
+user      | appuser 
+UID       | 1001    
+GID       | 100     
+cwd       | /app    
 
 ### Creating a Dockerfile
 
