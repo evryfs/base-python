@@ -6,7 +6,7 @@ jobs:
     steps:
     - uses: actions/checkout@v1
     - name: Install git
-      run: apt-get install git
+      run: sudo apt-get install git
     - name: Quay login
       run: docker login -u='${{ secrets.QUAY_USER }}' -p='${{ secrets.QUAY_TOKEN }}'
     - name: Build images
