@@ -1,5 +1,7 @@
 # EVRY FS python base image
 
+[![Docker Repository on Quay](https://quay.io/repository/evryfs/base-python/status "Docker Repository on Quay")](https://quay.io/repository/evryfs/base-python)
+
 This is the base image for running plain python applications. For WSGI or
 ASGI web applications, use the other base images that are based on this.
 

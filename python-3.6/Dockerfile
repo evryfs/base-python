@@ -9,7 +9,7 @@ LABEL maintainer="Kristian Berg <kristian.berg@evry.com>" \
       org.opencontainers.image.created=$BUILD_DATE \
       org.opencontainers.image.authors="Kristian Berg <kristian.berg@evry.com>" \
       org.opencontainers.image.url=$BUILD_URL \
-      org.opencontainers.image.documentation="https://fsstash.evry.com/users/et4787/repos/base-python/browse" \
+      org.opencontainers.image.documentation="https://github.com/evryfs/base-python/" \
       org.opencontainers.image.source=$GIT_URL \
       org.opencontainers.image.version=$PYTHON_VERSION \
       org.opencontainers.image.revision=$GIT_COMMIT \
@@ -20,4 +20,4 @@ LABEL maintainer="Kristian Berg <kristian.berg@evry.com>" \
 RUN useradd -r -s /bin/bash -c "application user" -d /app -u 1001 -g 100 -m appuser
 WORKDIR /app
 USER 1001:100
-ENTRYPOINT ["pip list && python"]
+ENTRYPOINT ["python"]
