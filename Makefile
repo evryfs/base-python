@@ -43,7 +43,7 @@ PYTHON_36 := $(shell head -n1 python-3.6/Dockerfile|cut -d":" -f2|cut -d"-" -f1)
 		-t quay.io/evryfs/base-python:3.6 \
 		-t quay.io/evryfs/base-python:"$(PYTHON_36)" \
 		--build-arg PYTHON_VERSION="$(PYTHON_36)" \
-		--build-arg BUILD_DATE="$"BUILD_DATE)" \
+		--build-arg BUILD_DATE="$(BUILD_DATE)" \
 		--build-arg BUILD_URL="$(BUILD_URL)" \
 		--build-arg GIT_URL="$(GIT_URL)" \
 		--build-arg GIT_COMMIT="$(GIT_COMMIT)" \
@@ -51,8 +51,11 @@ PYTHON_36 := $(shell head -n1 python-3.6/Dockerfile|cut -d":" -f2|cut -d"-" -f1)
 
 push:
 	docker push quay.io/evryfs/base-python:3.8
+	docker push quay.io/evryfs/base-python:$(PYTHON_38)
 	docker push quay.io/evryfs/base-python:3.7
+	docker push quay.io/evryfs/base-python:$(PYTHON_37)
 	docker push quay.io/evryfs/base-python:3.6
+	docker push quay.io/evryfs/base-python:$(PYTHON_36)
 
 
 all: 3.8 3.7 3.6 push
