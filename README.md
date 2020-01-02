@@ -26,7 +26,7 @@ and supply your own startup script. Check the [building containers](https://fswi
 guide for information about the required labels.
 
 ```dockerfile
-FROM evryfs/base-python:3.8.0
+FROM quay.io/evryfs/base-python:3.8.0
 ARG BUILD_DATE
 ARG BUILD_URL
 ARG GIT_URL

@@ -1,4 +1,4 @@
-FROM python:3.6.9-slim
+FROM python:3.6.10-slim
 ARG BUILD_DATE
 ARG BUILD_URL
 ARG GIT_URL
@@ -20,4 +20,4 @@ LABEL maintainer="Kristian Berg <kristian.berg@evry.com>" \
 RUN useradd -r -s /bin/bash -c "application user" -d /app -u 1001 -g 100 -m appuser
 WORKDIR /app
 USER 1001:100
-ENTRYPOINT ["python"]
+CMD ["python"]

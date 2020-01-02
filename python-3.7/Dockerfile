@@ -20,4 +20,4 @@ LABEL maintainer="Kristian Berg <kristian.berg@evry.com>" \
 RUN useradd -r -s /bin/bash -c "application user" -d /app -u 1001 -g 100 -m appuser
 WORKDIR /app
 USER 1001:100
-ENTRYPOINT ["python"]
+CMD ["python"]
