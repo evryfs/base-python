@@ -17,6 +17,11 @@ LABEL maintainer="Kristian Berg <kristian.berg@evry.com>" \
       org.opencontainers.image.licenses="proprietary-license" \
       org.opencontainers.image.description="Base image for python 3.6"
 
+RUN apt-get update
+RUN DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends curl
+RUN rm -rf /var/lib/apt/lists/*
+RUN python -V
+RUN pip freeze
 RUN useradd -r -s /bin/bash -c "application user" -d /app -u 1001 -g 100 -m appuser
 WORKDIR /app
 USER 1001:100
