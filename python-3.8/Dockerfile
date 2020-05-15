@@ -1,4 +1,4 @@
-FROM python:3.8.2-slim
+FROM python:3.8.3-slim
 ARG BUILD_DATE
 ARG BUILD_URL
 ARG GIT_URL
