@@ -33,6 +33,7 @@ RUN pip install cx_Oracle==8.1.0
 RUN python -V
 RUN pip freeze
 RUN useradd -r -s /bin/bash -c "application user" -d /app -u 1001 -g 100 -m appuser
+RUN echo 'PATH="/app/.local/bin:$PATH"' >> /app/.bashrc
 WORKDIR /app
 USER 1001:100
 CMD ["python"]
