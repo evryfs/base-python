@@ -29,7 +29,8 @@ RUN curl -s https://download.oracle.com/otn_software/linux/instantclient/instant
     rm /tmp/*.zip && \
     mv instantclient* instantclient
 RUN echo /opt/instantclient > /etc/ld.so.conf.d/oracle-instantclient.conf && ldconfig
-RUN pip install cx_Oracle==8.1.0
+COPY requirements.txt /tmp
+RUN pip install -r /tmp/requirements.txt
 RUN python -V
 RUN pip freeze
 RUN useradd -r -s /bin/bash -c "application user" -d /app -u 1001 -g 100 -m appuser
