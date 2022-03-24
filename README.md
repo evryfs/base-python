@@ -22,7 +22,7 @@ cwd       | /app
 
 To utilize this image to create a container for your application, create a new
 Dockerfile and extend this image. Then add your python sauce to the container
-and supply your own startup script. Check the [building containers](https://fswiki.evry.com/display/architecture/Building+containers)
+and supply your own startup script. Check the [building containers](https://wiki.finods.com/display/architecture/Building+containers)
 guide for information about the required labels.
 
 ```dockerfile
@@ -31,7 +31,7 @@ ARG BUILD_DATE
 ARG BUILD_URL
 ARG GIT_URL
 ARG GIT_COMMIT
-LABEL maintainer="Your Name <your.email.here@evry.com>"
+LABEL maintainer="Your Name <your.email.here@tietoevry.com>"
       com.finods.ccm.system=""
       com.finods.ccm.group=""
       org.opencontainers.image.title=""
