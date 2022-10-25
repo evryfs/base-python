@@ -4,10 +4,10 @@ ARG BUILD_URL
 ARG GIT_URL
 ARG GIT_COMMIT
 ARG VERSION
-LABEL maintainer="Kristian Berg <kristian.berg@evry.com>" \
+LABEL maintainer="Kristian Berg <kristian.berg@tietoevry.com>" \
       org.opencontainers.image.title="base-python" \
       org.opencontainers.image.created=$BUILD_DATE \
-      org.opencontainers.image.authors="Kristian Berg <kristian.berg@evry.com>" \
+      org.opencontainers.image.authors="Kristian Berg <kristian.berg@tietoevry.com>" \
       org.opencontainers.image.url=$BUILD_URL \
       org.opencontainers.image.documentation="https://github.com/evryfs/base-python/" \
       org.opencontainers.image.source=$GIT_URL \
