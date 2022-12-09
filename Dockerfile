@@ -1,4 +1,4 @@
-FROM python:3.11.0-slim-buster
+FROM python:3.11.1-slim-buster
 ARG BUILD_DATE
 ARG BUILD_URL
 ARG GIT_URL
