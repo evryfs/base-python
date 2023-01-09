@@ -1,4 +1,4 @@
-FROM python:3.11.1-slim-buster
+FROM python:3.11.1-slim-bullseye
 ARG BUILD_DATE
 ARG BUILD_URL
 ARG GIT_URL
@@ -18,7 +18,7 @@ LABEL maintainer="Kristian Berg <kristian.berg@tietoevry.com>" \
       org.opencontainers.image.description="Base image for python 3"
 ENV DEBIAN_FRONTEND=noninteractive LANG=C.UTF-8
 RUN apt-get update && \
-    apt-get install -y --no-install-recommends libaio1 curl ca-certificates wget vim dnsutils iputils-ping netcat iproute2 net-tools tar gzip bzip2 unzip tzdata lsof psmisc less gcc libstdc++-8-dev && \
+    apt-get install -y --no-install-recommends libaio1 curl ca-certificates wget vim dnsutils iputils-ping netcat iproute2 net-tools tar gzip bzip2 unzip tzdata lsof psmisc less gcc libstdc++-10-dev && \
     apt-get -y clean && \
     rm -rf /var/cache/apt /var/lib/apt/lists/* /tmp/* /var/tmp/*
 RUN curl -s https://download.oracle.com/otn_software/linux/instantclient/instantclient-basic-linuxx64.zip -o /tmp/instantclient-basic-linuxx64.zip && \
@@ -31,7 +31,7 @@ RUN curl -s https://download.oracle.com/otn_software/linux/instantclient/instant
 RUN echo /opt/instantclient > /etc/ld.so.conf.d/oracle-instantclient.conf && ldconfig
 COPY requirements.txt /tmp
 RUN pip install -r /tmp/requirements.txt
-RUN apt-get purge -y gcc libstdc++-8-dev && apt-get autoremove -y && rm -rf /var/lib/apt/lists/*
+RUN apt-get purge -y gcc libstdc++-10-dev && apt-get autoremove -y && rm -rf /var/lib/apt/lists/*
 RUN python -V
 RUN pip freeze
 RUN useradd -r -s /bin/bash -c "application user" -d /app -u 1001 -g 100 -m appuser
