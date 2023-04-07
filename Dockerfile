@@ -1,4 +1,4 @@
-FROM python:3.11.2-slim-bullseye
+FROM python:3.11.3-slim-bullseye
 ARG BUILD_DATE
 ARG BUILD_URL
 ARG GIT_URL
