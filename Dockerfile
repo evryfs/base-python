@@ -1,4 +1,4 @@
-FROM python:3.14.7-slim-trixie
+FROM python:3.14.8-slim-trixie
 ARG BUILD_DATE
 ARG BUILD_URL
 ARG GIT_URL
