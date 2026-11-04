@@ -1,4 +1,4 @@
-FROM python:3.14.7-slim-trixie
+FROM python:3.15.2-slim-trixie
 ARG BUILD_DATE
 ARG BUILD_URL
 ARG GIT_URL
@@ -13,7 +13,7 @@ LABEL maintainer="Kristian Berg <kristian.berg@tietoevry.com>" \
   org.opencontainers.image.source=$GIT_URL \
   org.opencontainers.image.version=$VERSION \
   org.opencontainers.image.revision=$GIT_COMMIT \
-  org.opencontainers.image.vendor="Tietoevry BAnking" \
+  org.opencontainers.image.vendor="Tieto Banktech" \
   org.opencontainers.image.licenses="proprietary-license" \
   org.opencontainers.image.description="Base image for python 3"
 ENV DEBIAN_FRONTEND=noninteractive LANG=C.UTF-8
